@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------------------------------------------------
+1. Verklaar wat er gebeurd als een socket verbinding wordt opgebouwd en vervolgens een 2e connectie gemaakt wordt.
+----------------------------------------------------------------------------------------------------------------------
+
+Hetzelfde als bij iedere verbinding die via de socket gemaakt word. Het komt er op neer dat iedere verbinding met een 
+socket een nieuwe SmtpContext (een subclass van thread) aangemaakt word, waardoor dus beide verbindingen van de 
+clients apart worden afgehandeld. Echter, omdat alles gaat via de System.out.print worden beide tegelijkertijd in de 
+console getoond.
+
+----------------------------------------------------------------------------------------------------------------------
+2. Wat zou je bij jou thuis moeten doen om je ontwikkelde service op het internet aan te bieden?
+----------------------------------------------------------------------------------------------------------------------
+
+Het belangrijkste is natuurlijk dat de server draait. Verder zal de firewall aangepast moeten worden om zo mailtjes 
+door te kunnen laten via de router en de computer zelf natuurlijk. Verder moet er ook geregeld worden dat de berichten
+die naar de router gestuurd worden naar de goede (jouw) pc via de goede poort gestuurd worden. Naast deze dingen zou 
+er ook gebruik gemaakt kunnen worden van DNS en eventueel een SSL verbinding waardoor deze versleuteld (encryptie) is. 
